@@ -1,0 +1,34 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "gradle" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
+    directories: 
+      - "/services/disco-api/ci"
+      - "/services/ess-api/ci"
+      - "/services/linear-api/ci"
+      - "/services/mindata-api/ci"
+      - "/services/parental-api/ci"
+      - "/services/ping-api/ci"
+      - "/services/playback-api/ci"
+      - "/services/profile-api/ci"
+      - "/services/rights-api/ci"
+      - "/services/saved-api/ci"
+      - "/services/session-api/ci"
+      - "/services/sports-api/ci"
+      - "/services/sportscast/ci"
+      - "/services/subscriber-api/ci"
+      - "/services/transactional-api/ci"
+      - "/services/xifa-api/ci"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
